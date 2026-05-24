@@ -20,7 +20,7 @@ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 
 # Install python libraries
-pip3 install yt-dlp openai openai-whisper google-genai --break-system-packages
+sudo pip3 install yt-dlp openai openai-whisper google-genai --break-system-packages
 ```
 `Whisper model (~1.5 GB) downloads automatically on first run.`
 
