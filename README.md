@@ -61,21 +61,18 @@ python3 pipeline.py "https://..." --mode zh --translator gpt --out ./my_output -
 All processed batch files are generated into structural output directories. You can explore pre-rendered outputs inside the my_output/ folder of this repository:
 
 ```bash
-#Japanese → Chinese + English
-#b站访谈
+# ── JAPANESE → CHINESE + ENGLISH (Bilibili Interviews) ───────────────────
 python3 pipeline.py "https://www.bilibili.com/video/BV1Ct411f7nC/?spm_id_from=333.337.search-card.all.click&vd_source=93675b9f5fc7be8a722f7ff16cd66808" --mode both --out ./my_output
 python3 pipeline.py "https://www.bilibili.com/video/BV19tZPYpEzf/?spm_id_from=333.337.search-card.all.click&vd_source=93675b9f5fc7be8a722f7ff16cd66808" --mode both --out ./my_output
 ```
 
 ```bash
-#Japanese → Chinese
-#youtube 试听
+# ── JAPANESE → CHINESE (YouTube Trial Audio / 试听) ─────────────────────
 python3 pipeline.py "https://www.youtube.com/watch?v=hUJzntL4jao" --mode zh --out ./my_output
 ```
 
 ```bash
-#Japanese only, no translation
-#youtube 试听
+# ── JAPANESE ONLY, NO TRANSLATION (YouTube Trial Audio / 试听) ───────────
 python3 pipeline.py "https://www.youtube.com/watch?v=qQ9w7Gw9bOk" --mode none --out ./my_output
 python3 pipeline.py "https://www.youtube.com/watch?v=9UEzsCNMLjE" --mode none --out ./my_output
 python3 pipeline.py "https://www.youtube.com/watch?v=8jXNKyTGjD4" --mode none --out ./my_output
@@ -88,7 +85,7 @@ Two files are written to the output folder after every run:
 ### `<video title>.txt` — the transcript
 
 ```
-https://www.youtube.com/watch?v=xxxx
+Video Link Here
 Video Title Here
 ────────────────────────────────────────────────────────────
 
