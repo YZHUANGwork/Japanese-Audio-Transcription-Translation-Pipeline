@@ -1,6 +1,6 @@
 # Japanese-Audio-Transcription-Translation-Pipeline
 An automated, serverless pipeline that accepts a URL for any Japanese audio track, CD drama, or video, extracts the audio, transcribes it using OpenAI Whisper, and generates high-quality parallel translations (English/Chinese) using GPT-4o or Gemini 2.0. **🎯 Targeted Use Case: 生肉/没有野生字幕菌的 游戏 CD 试听、访谈、语音包及广播剧 (/ω＼)
-
+---
 
 ## Setup
 
@@ -8,7 +8,6 @@ An automated, serverless pipeline that accepts a URL for any Japanese audio trac
 Run the following commands in your terminal to update system packages, install core dependencies, and set up your Python environment:
 ```bash
 # Update package lists and install utilities + FFmpeg
-ubuntu 24.4
 sudo apt install python3-full
 sudo apt install python3-pip
 sudo apt install ffmpeg
@@ -47,6 +46,7 @@ export GEMINI_API_KEY=...
 > Using a paid OpenAI API key (`gpt` mode) completely avoids this. It handles the parallel workload effortlessly and handles long tracks without dropping connections.
 
 Get a Gemini key free at: https://aistudio.google.com/app/apikey
+
 Get an OpenAI key at: https://platform.openai.com/api-keys
 
 ---
