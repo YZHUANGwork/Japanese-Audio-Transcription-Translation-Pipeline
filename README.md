@@ -1,7 +1,11 @@
 # Japanese-Audio-Transcription-Translation-Pipeline
-An automated, serverless pipeline that accepts a URL for any Japanese audio track, CD drama, or video, extracts the audio, transcribes it using OpenAI Whisper, and generates high-quality parallel translations (English/Chinese) using GPT-4o or Gemini 2.0.  Targeted Use Case: 生肉/没有野生字幕菌的 游戏 CD 试听、访谈、语音包及广播剧 (/ω＼)
+An automated, serverless pipeline that accepts a URL for any Japanese audio track, CD drama, or video, extracts the audio, transcribes it using OpenAI Whisper, and generates high-quality parallel translations (English/Chinese) using GPT-4o or Gemini 2.0. **🎯 Targeted Use Case: 生肉/没有野生字幕菌的 游戏 CD 试听、访谈、语音包及广播剧 (/ω＼)
 
 
+## Setup
+
+### 📦 Prerequisites (Tested on Ubuntu 24.04 LTS / WSL)
+Run the following commands in your terminal to update system packages, install core dependencies, and set up your Python environment:
 ```bash
 # Update package lists and install utilities + FFmpeg
 ubuntu 24.4
@@ -21,7 +25,7 @@ pip3 install yt-dlp openai openai-whisper google-genai --break-system-packages
 ```
 `Whisper model (~1.5 GB) downloads automatically on first run.`
 
-### 2. Set your translation API key (pick one)
+### 🔑 Set your translation API key (pick one)
 
 ```bash
 # GPT-4o (OpenAI) — paid, high quality
@@ -30,6 +34,17 @@ export OPENAI_API_KEY=sk-...
 # Gemini (Google) — free tier available
 export GEMINI_API_KEY=...
 ```
+> 💡 **Developer Note: Why GPT-4o is Recommended**
+> 
+> Because long audio tracks (like CD dramas and interviews) generate a massive number of segments, this script translates everything in parallel to finish the job in seconds instead of making you wait 20 minutes.
+> 
+> Gemini's free tier cannot handle this sudden burst traffic and crashes mid-run:
+> ```text
+> WARNING: segment 1 failed: 429 RESOURCE_EXHAUSTED. 
+> Quota exceeded for metric: ...free_tier_requests, limit: 0
+> ```
+> 
+> Using a paid OpenAI API key (`gpt` mode) completely avoids this. It handles the parallel workload effortlessly and handles long tracks without dropping connections.
 
 Get a Gemini key free at: https://aistudio.google.com/app/apikey
 Get an OpenAI key at: https://platform.openai.com/api-keys
