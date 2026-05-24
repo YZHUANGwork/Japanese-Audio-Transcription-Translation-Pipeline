@@ -58,9 +58,13 @@ python3 pipeline.py "https://..." --mode zh --translator gpt --out ./my_output -
 ## Examples
 All processed batch files are generated into structural output directories. You can explore pre-rendered outputs inside the my_output/ folder of this repository:
 
-JP to chinese+english:
+#Japanese → Chinese + English
+b站访谈
+```bash
 python3 pipeline.py "https://www.bilibili.com/video/BV1Ct411f7nC/?spm_id_from=333.337.search-card.all.click&vd_source=93675b9f5fc7be8a722f7ff16cd66808" --mode both --out ./my_output
  python3 pipeline.py "https://www.bilibili.com/video/BV19tZPYpEzf/?spm_id_from=333.337.search-card.all.click&vd_source=93675b9f5fc7be8a722f7ff16cd66808" --mode both --out ./my_output
+```
+
 
 ## Output
 
