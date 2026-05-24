@@ -1,5 +1,5 @@
 # Japanese-Audio-Transcription-Translation-Pipeline
-An automated, serverless pipeline that accepts a URL for any Japanese audio track, CD drama, or video, extracts the audio, transcribes it using OpenAI Whisper, and generates high-quality parallel translations (English/Chinese) using GPT-4o or Gemini 2.0.  Targeted Use Case: 动漫/游戏 CD 试听、访谈、语音包及古早广播剧
+An automated, serverless pipeline that accepts a URL for any Japanese audio track, CD drama, or video, extracts the audio, transcribes it using OpenAI Whisper, and generates high-quality parallel translations (English/Chinese) using GPT-4o or Gemini 2.0.  Targeted Use Case: 生肉/没有野生字幕菌的 游戏 CD 试听、访谈、语音包及广播剧
 
 ```bash
 # Update package lists and install utilities + FFmpeg
@@ -56,26 +56,26 @@ python3 pipeline.py "https://..." --mode zh --translator gpt --out ./my_output -
 ---
 
 ## Examples
+> ⚠️ **Disclaimer:** This project is developed strictly for personal hobby, learning, and linguistic research purposes. It is a non-commercial passion project built to explore local audio transcription and LLM translation capabilities. Please ensure your usage complies with the terms of service of the respective hosting platforms.
+> 
 All processed batch files are generated into structural output directories. You can explore pre-rendered outputs inside the my_output/ folder of this repository:
 
-#Japanese → Chinese + English
-
-#b站访谈
 ```bash
+#Japanese → Chinese + English
+#b站访谈
 python3 pipeline.py "https://www.bilibili.com/video/BV1Ct411f7nC/?spm_id_from=333.337.search-card.all.click&vd_source=93675b9f5fc7be8a722f7ff16cd66808" --mode both --out ./my_output
 python3 pipeline.py "https://www.bilibili.com/video/BV19tZPYpEzf/?spm_id_from=333.337.search-card.all.click&vd_source=93675b9f5fc7be8a722f7ff16cd66808" --mode both --out ./my_output
 ```
 
-#Japanese → Chinese
-
-#youtube 试听
 ```bash
+#Japanese → Chinese
+#youtube 试听
 python3 pipeline.py "https://www.youtube.com/watch?v=hUJzntL4jao" --mode zh --out ./my_output
 ```
 
+```bash
 #Japanese only, no translation
 #youtube 试听
-```bash
 python3 pipeline.py "https://www.youtube.com/watch?v=qQ9w7Gw9bOk" --mode none --out ./my_output
 python3 pipeline.py "https://www.youtube.com/watch?v=9UEzsCNMLjE" --mode none --out ./my_output
 python3 pipeline.py "https://www.youtube.com/watch?v=8jXNKyTGjD4" --mode none --out ./my_output
