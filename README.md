@@ -59,12 +59,27 @@ python3 pipeline.py "https://..." --mode zh --translator gpt --out ./my_output -
 All processed batch files are generated into structural output directories. You can explore pre-rendered outputs inside the my_output/ folder of this repository:
 
 #Japanese → Chinese + English
-b站访谈
+
+#b站访谈
 ```bash
 python3 pipeline.py "https://www.bilibili.com/video/BV1Ct411f7nC/?spm_id_from=333.337.search-card.all.click&vd_source=93675b9f5fc7be8a722f7ff16cd66808" --mode both --out ./my_output
- python3 pipeline.py "https://www.bilibili.com/video/BV19tZPYpEzf/?spm_id_from=333.337.search-card.all.click&vd_source=93675b9f5fc7be8a722f7ff16cd66808" --mode both --out ./my_output
+python3 pipeline.py "https://www.bilibili.com/video/BV19tZPYpEzf/?spm_id_from=333.337.search-card.all.click&vd_source=93675b9f5fc7be8a722f7ff16cd66808" --mode both --out ./my_output
 ```
 
+#Japanese → Chinese
+
+#youtube 试听
+```bash
+python3 pipeline.py "https://www.youtube.com/watch?v=hUJzntL4jao" --mode zh --out ./my_output
+```
+
+#Japanese only, no translation
+#youtube 试听
+```bash
+python3 pipeline.py "https://www.youtube.com/watch?v=qQ9w7Gw9bOk" --mode none --out ./my_output
+python3 pipeline.py "https://www.youtube.com/watch?v=9UEzsCNMLjE" --mode none --out ./my_output
+python3 pipeline.py "https://www.youtube.com/watch?v=8jXNKyTGjD4" --mode none --out ./my_output
+```
 
 ## Output
 
