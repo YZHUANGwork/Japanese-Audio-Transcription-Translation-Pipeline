@@ -1,4 +1,3 @@
-Markdown
 ## Files and Corresponding Commands
 
 ### Parallel Translation: JP + CN + EN
