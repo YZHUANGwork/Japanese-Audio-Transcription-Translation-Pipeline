@@ -1,5 +1,5 @@
 # Japanese-Audio-Transcription-Translation-Pipeline
-An automated, serverless pipeline that accepts a URL for any Japanese audio track, CD drama, or video, extracts the audio, transcribes it using OpenAI Whisper, and generates high-quality parallel translations (English/Chinese) using GPT-4o or Gemini 2.0.  Targeted Use Case: 生肉/没有野生字幕菌的 游戏 CD 试听、访谈、语音包及广播剧 （霓虹文学不会，汉化找不到，感谢claude，感谢ai， (/ω＼)
+An automated, serverless pipeline that accepts a URL for any Japanese audio track, CD drama, or video, extracts the audio, transcribes it using OpenAI Whisper, and generates high-quality parallel translations (English/Chinese) using GPT-4o or Gemini 2.0.  Targeted Use Case: 生肉/没有野生字幕菌的 游戏 CD 试听、访谈、语音包及广播剧 (/ω＼)
 
 
 ```bash
