@@ -18,6 +18,10 @@ python3 pipeline.py "https://www.bilibili.com/video/BV19tZPYpEzf/?spm_id_from=33
 ```bash
 python3 pipeline.py "https://www.youtube.com/watch?v=hUJzntL4jao" --mode zh --out ./my_output
 ```
+`_银魂广播CD__2016_冬_秘密__嘉宾_三木真一郎_.txt`
+```bash
+python3 pipeline.py "https://www.bilibili.com/video/BV1as411q7k7/?spm_id_from=333.1387.favlist.content.click&vd_source=93675b9f5fc7be8a722f7ff16cd66808" --mode zh --translator gpt --out ./my_output
+```
 
 ### Transcription Only: JP Raw
 `ドラマCD_新宿ラッキーホール_メッセージボイス２_三木眞一郎_.txt`
